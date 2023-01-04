@@ -1,8 +1,11 @@
 -- ToDoList
--- Add Code to place torch each time it starts
+-- Change inventory dump routine to do at the start of a tunnel
+-- Use any Coal Mined as fuel
+-- 
 -- Add Fuel Code so can know almost how much fuel you need
--- Add second fuel slot if you go allout diggin
--- Mabye add code that make turtle make new line of tunnels
+
+-- Slot Order
+-- 	1:Torch, 2:Chest, 3:Fuel, 4:Bridge Block(cobble)
 
 --Local
 local distance = 0 -- How Far Did User Pick
@@ -75,7 +78,7 @@ local function ForwardM()
 		end
 		turtle.select(4)
 		turtle.placeDown()
-		if onlight == 8 then -- Every 10 Block turtle place torch
+		if onlight == 2 then -- Checking Lighht levels 
 			if torch > 0 then
 				turtle.turnLeft()
 				turtle.turnLeft()
