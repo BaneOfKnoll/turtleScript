@@ -1,17 +1,3 @@
--- This Version
--- 2.13 10/11/2014
--- ChangeLogs
--- 2.04 - Adding Left or Right Support
--- 2.05 - Changing Lot Code For Some Stable And Cleaner Code
--- 2.06 - Ops Forget Fuel Chcking Code after rewrtitting
--- 2.07 - Woops My Bad i wrote back() not Back()
--- 2.08 - Fixing Imputs
--- 2.09 - Forget That i change remove line of code since i use local function now
--- 2.10 - Minor error with back that it leave one block in wall
---	  Change: Torch spacing to 8 from 10
--- 2.11 - Change: Right to left and Left to Right better understand
--- 2.12 - Add Stop Code when item are gone
--- 2.13 - i made big mistake i forget to end to new stop code
 -- ToDoList
 -- Add Code to place torch each time it starts
 -- Add Fuel Code so can know almost how much fuel you need
@@ -24,7 +10,7 @@ local onlight = 0 -- When to Place Torch
 local torch = turtle.getItemCount(1) -- How many items are in slot 1 (torch)
 local chest = turtle.getItemCount(2) -- How many items are in slot 2 (chest)
 local ItemFuel = turtle.getItemCount(3) -- How many items are in slot 3 (Fuel)
-local MD = 5 -- How Many Blocks Apart From Each Mine
+local MD = 4 -- How Many Blocks Apart From Each Mine
 local MineTimes = 0 -- If Multi Mines Are ON then This will keep Count
 local Fuel = 0 -- if 2 then it is unlimited no fuel needed
 local NeedFuel = 0 -- If Fuel Need Then 1 if not Then 0
@@ -163,7 +149,7 @@ end
 
 -- Multimines Program
 local function MultiMines()
-	if Way == 1 then
+	if Way == 1 then --Tunnels to the right
 		turtle.turnLeft()
 		turtle.down()
 	else
