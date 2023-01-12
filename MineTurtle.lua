@@ -9,7 +9,7 @@
 
 --Local
 local distance = 0 -- How Far Did User Pick
-local onlight = 0 -- When to Place Torch
+local onlight = -1 -- When to Place Torch
 local torch = turtle.getItemCount(1) -- How many items are in slot 1 (torch)
 local chest = turtle.getItemCount(2) -- How many items are in slot 2 (chest)
 local ItemFuel = turtle.getItemCount(3) -- How many items are in slot 3 (Fuel)
@@ -90,7 +90,7 @@ local function ForwardM()
 				onlight = onlight - 8
 			else
 				print("turtle run out of torchs")
-				os.shutdown()
+				--os.shutdown()
 			end
 		end
 		if turtle.getItemCount(16)>0 then -- If slot 16 in turtle has item slot 5 to 16 will go to chest
@@ -150,7 +150,7 @@ local function Back()
 	until TB == 0
 end
 
--- Multimines Program
+-- MultiMines Program
 local function MultiMines()
 	if Way == 1 then --Tunnels to the right
 		turtle.turnLeft()
@@ -187,7 +187,7 @@ local function Restart()
 	TF = distance
 	TB = distance
 	MD = 3
-	onlight = 0
+	onlight = -1
 end
 
 -- Starting 
