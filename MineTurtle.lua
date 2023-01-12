@@ -80,14 +80,15 @@ local function ForwardM()
 		turtle.placeDown()
 		if onlight == 2 then -- Checking Lighht levels 
 			if torch > 0 then
-				turtle.turnLeft()
-				turtle.turnLeft()
-				turtle.select(1)
-				turtle.place()
-				turtle.turnLeft()
-				turtle.turnLeft()
-				torch = torch - 1
-				onlight = onlight - 8
+				print("Where we're going, we don't need torches")
+				-- turtle.turnLeft()
+				-- turtle.turnLeft()
+				-- turtle.select(1)
+				-- turtle.place()
+				-- turtle.turnLeft()
+				-- turtle.turnLeft()
+				-- torch = torch - 1
+				-- onlight = onlight - 8
 			else
 				print("turtle run out of torchs")
 				--os.shutdown()
